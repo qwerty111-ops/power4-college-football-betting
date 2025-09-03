@@ -1,0 +1,128 @@
+/*
+ * Basic styling for the Power‑4 college football betting analysis site.
+ *
+ * This stylesheet defines a simple responsive layout for the site.  A small
+ * navigation bar appears at the top of every page with links to the main
+ * sections.  Game cards are presented in a grid on the homepage and use
+ * conference colours to help readers quickly identify which Power‑4 league
+ * each matchup belongs to.  Colours are based on the user specification:
+ * Big Ten = blue, SEC = red, ACC = orange and Big 12 = green.
+ */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f7fa;
+  color: #333;
+}
+
+/* Navigation bar */
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #0a1931;
+  color: white;
+  padding: 10px 20px;
+  align-items: center;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* Container for the game cards */
+#games-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.game-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.game-card:hover {
+  transform: translateY(-3px);
+}
+
+.game-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.team-name {
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+}
+
+.team-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.game-info {
+  font-size: 0.9rem;
+  margin-top: 8px;
+}
+
+.odds {
+  margin-top: 6px;
+  font-size: 0.8rem;
+}
+
+/* Conference colour bars at the top of each card */
+.conference-bar {
+  height: 5px;
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+  margin-bottom: 10px;
+}
+
+.big-ten { background-color: #00449e; }
+.sec     { background-color: #c30421; }
+.acc     { background-color: #f26621; }
+.big-12  { background-color: #018749; }
+
+/* Simple table for rankings pages */
+.rankings-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.rankings-table th, .rankings-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+  font-size: 0.85rem;
+}
+
+.rankings-table th {
+  background-color: #0a1931;
+  color: white;
+}
+
+.rankings-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}

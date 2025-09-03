@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Power‑4 College Football Rankings</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Shared navigation bar -->
+    <nav class="nav">
+      <a href="index.html">This Weekend’s Games</a>
+      <a href="rankings.html?category=offense">Offensive Rankings</a>
+      <a href="rankings.html?category=defense">Defensive Rankings</a>
+      <a href="rankings.html?category=returning">Returning Production</a>
+      <a href="rankings.html?category=sos">Strength of Schedule</a>
+    </nav>
+
+    <main>
+      <h1 id="rankings-title" style="text-align:center;margin-top:20px;"></h1>
+      <div id="rankings-description" style="max-width:800px;margin:0 auto;padding:10px 20px;"></div>
+      <div id="rankings-container" style="overflow-x:auto;max-width:1000px;margin:0 auto;"></div>
+    </main>
+
+    <script src="rankings.js"></script>
+  </body>
+</html>
