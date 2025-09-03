@@ -65,14 +65,21 @@ def fetch_json(url: str) -> Dict[str, Any]:
 
 def get_team_info(team_id: str) -> Dict[str, Any]:
     """
-    Retrieve basic team information (conference group ID, display name and logo)
-    from ESPN's core API.  Results are not cached here because the number of
-    teams is limited to those appearing on the scoreboard.
+    Retrieve basic team information for a given ESPN team ID.
+
+    **Note:** ESPN's core API is not always accessible from every environment.
+    This helper attempts to fetch team data via the core API, but if the
+    request fails it returns a minimal structure instead.  The caller should
+    prefer using the `team` object already present in the scoreboard when
+    available.
     """
     base = "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/teams/"
-    data = fetch_json(f"{base}{team_id}?lang=en&region=us")
+    try:
+        data = fetch_json(f"{base}{team_id}?lang=en&region=us")
+    except Exception:
+        # Fallback minimal structure when the API cannot be reached
+        return {"groupId": None, "name": "", "abbreviation": "", "logo": None}
     group_id = None
-    # The 'groups' field may be nested or absent depending on the response structure
     if isinstance(data.get("groups"), dict) and data["groups"].get("id"):
         group_id = int(data["groups"]["id"])
     logo = None
@@ -127,19 +134,40 @@ def build_games_for_date(date_str: str) -> List[Dict[str, Any]]:
         p4 = False
         competitor_entries: List[Dict[str, Any]] = []
         for c in competitors:
-            team_id = str(c["team"]["id"])
-            info = get_team_info(team_id)
+            team_obj = c.get("team") or {}
+            team_id = str(team_obj.get("id"))
+            # Use the conferenceId embedded in the scoreboard team object to
+            # determine Power‑4 membership.  If conferenceId is missing or
+            # unrecognized, fall back to get_team_info() to attempt to fetch
+            # additional details.
+            group_id = None
+            if team_obj.get("conferenceId") is not None:
+                try:
+                    group_id = int(team_obj.get("conferenceId"))
+                except (TypeError, ValueError):
+                    group_id = None
+            # Basic fields available directly from the scoreboard
+            name = team_obj.get("displayName") or team_obj.get("name") or ""
+            abbrev = team_obj.get("abbreviation") or team_obj.get("shortDisplayName") or ""
+            logo = team_obj.get("logo")  # may be None
+            # If group_id is still None, attempt to fetch via core API
+            if group_id is None:
+                info = get_team_info(team_id)
+                group_id = info.get("groupId")
+                name = info.get("name") or name
+                abbrev = info.get("abbreviation") or abbrev
+                logo = info.get("logo") or logo
             competitor_entries.append(
                 {
                     "id": team_id,
-                    "name": info["name"],
-                    "abbreviation": info["abbreviation"],
-                    "groupId": info["groupId"],
-                    "logo": info["logo"],
+                    "name": name,
+                    "abbreviation": abbrev,
+                    "groupId": group_id,
+                    "logo": logo,
                     "homeAway": c.get("homeAway"),
                 }
             )
-            if info["groupId"] in P4_GROUPS:
+            if group_id in P4_GROUPS:
                 p4 = True
         if not p4:
             continue
