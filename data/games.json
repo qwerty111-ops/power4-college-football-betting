@@ -1,1 +1,2468 @@
-[]
+[
+  {
+    "id": "401752811",
+    "date": "2025-09-06T16:00Z",
+    "network": "",
+    "odds": {
+      "details": "PSU -42.5",
+      "overUnder": 54.5,
+      "spread": -42.5,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "213",
+        "name": "Penn State Nittany Lions",
+        "abbreviation": "PSU",
+        "groupId": 5,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/213.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "2229",
+        "name": "Florida International Panthers",
+        "abbreviation": "FIU",
+        "groupId": 12,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2229.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "2229": {
+        "totalPointsPerGame": 42.0,
+        "yardsPerGame": 456.0,
+        "passingYardsPerGame": 233.0,
+        "rushingYardsPerGame": 223.0,
+        "totalPointsPerGameAllowed": 9.0,
+        "yardsPerGameAllowed": 346.0,
+        "passingYardsPerGameAllowed": 241.0,
+        "rushingYardsPerGameAllowed": 105.0
+      },
+      "213": {
+        "totalPointsPerGame": 46.0,
+        "yardsPerGame": 438.0,
+        "passingYardsPerGame": 303.0,
+        "rushingYardsPerGame": 135.0,
+        "totalPointsPerGameAllowed": 11.0,
+        "yardsPerGameAllowed": 203.0,
+        "passingYardsPerGameAllowed": 125.0,
+        "rushingYardsPerGameAllowed": 78.0
+      }
+    }
+  },
+  {
+    "id": "401752693",
+    "date": "2025-09-06T16:00Z",
+    "network": "",
+    "odds": {
+      "details": "TEX -36.5",
+      "overUnder": 52.5,
+      "spread": -36.5,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "251",
+        "name": "Texas Longhorns",
+        "abbreviation": "TEX",
+        "groupId": 8,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/251.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "23",
+        "name": "San José State Spartans",
+        "abbreviation": "SJSU",
+        "groupId": 17,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/23.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "23": {
+        "totalPointsPerGame": 14.0,
+        "yardsPerGame": 383.0,
+        "passingYardsPerGame": 308.0,
+        "rushingYardsPerGame": 75.0,
+        "totalPointsPerGameAllowed": 16.0,
+        "yardsPerGameAllowed": 351.0,
+        "passingYardsPerGameAllowed": 115.0,
+        "rushingYardsPerGameAllowed": 236.0
+      },
+      "251": {
+        "totalPointsPerGame": 7.0,
+        "yardsPerGame": 336.0,
+        "passingYardsPerGame": 170.0,
+        "rushingYardsPerGame": 166.0,
+        "totalPointsPerGameAllowed": 14.0,
+        "yardsPerGameAllowed": 203.0,
+        "passingYardsPerGameAllowed": 126.0,
+        "rushingYardsPerGameAllowed": 77.0
+      }
+    }
+  },
+  {
+    "id": "401752825",
+    "date": "2025-09-06T16:00Z",
+    "network": "",
+    "odds": {
+      "details": "ILL -2.5",
+      "overUnder": 49.5,
+      "spread": 2.5,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "150",
+        "name": "Duke Blue Devils",
+        "abbreviation": "DUKE",
+        "groupId": 1,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/150.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "356",
+        "name": "Illinois Fighting Illini",
+        "abbreviation": "ILL",
+        "groupId": 5,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/356.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "356": {
+        "totalPointsPerGame": 52.0,
+        "yardsPerGame": 440.0,
+        "passingYardsPerGame": 231.0,
+        "rushingYardsPerGame": 209.0,
+        "totalPointsPerGameAllowed": 3.0,
+        "yardsPerGameAllowed": 163.0,
+        "passingYardsPerGameAllowed": 134.0,
+        "rushingYardsPerGameAllowed": 29.0
+      },
+      "150": {
+        "totalPointsPerGame": 45.0,
+        "yardsPerGame": 548.0,
+        "passingYardsPerGame": 389.0,
+        "rushingYardsPerGame": 159.0,
+        "totalPointsPerGameAllowed": 17.0,
+        "yardsPerGameAllowed": 275.0,
+        "passingYardsPerGameAllowed": 112.0,
+        "rushingYardsPerGameAllowed": 163.0
+      }
+    }
+  },
+  {
+    "id": "401754621",
+    "date": "2025-09-06T16:00Z",
+    "network": "",
+    "odds": {
+      "details": null,
+      "overUnder": null,
+      "spread": null,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "52",
+        "name": "Florida State Seminoles",
+        "abbreviation": "FSU",
+        "groupId": 1,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/52.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "2837",
+        "name": "East Texas A&M Lions",
+        "abbreviation": "ETAM",
+        "groupId": 30,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2837.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "2837": {},
+      "52": {
+        "totalPointsPerGame": 31.0,
+        "yardsPerGame": 382.0,
+        "passingYardsPerGame": 152.0,
+        "rushingYardsPerGame": 230.0,
+        "totalPointsPerGameAllowed": 17.0,
+        "yardsPerGameAllowed": 341.0,
+        "passingYardsPerGameAllowed": 254.0,
+        "rushingYardsPerGameAllowed": 87.0
+      }
+    }
+  },
+  {
+    "id": "401752822",
+    "date": "2025-09-06T16:00Z",
+    "network": "",
+    "odds": {
+      "details": "ISU -3.5",
+      "overUnder": 41.5,
+      "spread": -3.5,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "66",
+        "name": "Iowa State Cyclones",
+        "abbreviation": "ISU",
+        "groupId": 4,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/66.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "2294",
+        "name": "Iowa Hawkeyes",
+        "abbreviation": "IOWA",
+        "groupId": 5,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2294.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "2294": {
+        "totalPointsPerGame": 34.0,
+        "yardsPerGame": 358.0,
+        "passingYardsPerGame": 48.0,
+        "rushingYardsPerGame": 310.0,
+        "totalPointsPerGameAllowed": 7.0,
+        "yardsPerGameAllowed": 177.0,
+        "passingYardsPerGameAllowed": 134.0,
+        "rushingYardsPerGameAllowed": 43.0
+      },
+      "66": {
+        "totalPointsPerGame": 39.5,
+        "yardsPerGame": 421.0,
+        "passingYardsPerGame": 244.5,
+        "rushingYardsPerGame": 176.5,
+        "totalPointsPerGameAllowed": 14.0,
+        "yardsPerGameAllowed": 296.0,
+        "passingYardsPerGameAllowed": 199.5,
+        "rushingYardsPerGameAllowed": 96.5
+      }
+    }
+  },
+  {
+    "id": "401754525",
+    "date": "2025-09-06T16:00Z",
+    "network": "",
+    "odds": {
+      "details": "SMU -2.5",
+      "overUnder": 64.5,
+      "spread": -2.5,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "2567",
+        "name": "SMU Mustangs",
+        "abbreviation": "SMU",
+        "groupId": 1,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2567.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "239",
+        "name": "Baylor Bears",
+        "abbreviation": "BAY",
+        "groupId": 4,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/239.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "239": {
+        "totalPointsPerGame": 24.0,
+        "yardsPerGame": 483.0,
+        "passingYardsPerGame": 419.0,
+        "rushingYardsPerGame": 64.0,
+        "totalPointsPerGameAllowed": 38.0,
+        "yardsPerGameAllowed": 415.0,
+        "passingYardsPerGameAllowed": 108.0,
+        "rushingYardsPerGameAllowed": 307.0
+      },
+      "2567": {
+        "totalPointsPerGame": 42.0,
+        "yardsPerGame": 400.0,
+        "passingYardsPerGame": 260.0,
+        "rushingYardsPerGame": 140.0,
+        "totalPointsPerGameAllowed": 13.0,
+        "yardsPerGameAllowed": 351.0,
+        "passingYardsPerGameAllowed": 244.0,
+        "rushingYardsPerGameAllowed": 107.0
+      }
+    }
+  },
+  {
+    "id": "401752812",
+    "date": "2025-09-06T16:00Z",
+    "network": "",
+    "odds": {
+      "details": "IU -35.5",
+      "overUnder": 52.5,
+      "spread": -35.5,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "84",
+        "name": "Indiana Hoosiers",
+        "abbreviation": "IU",
+        "groupId": 5,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/84.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "338",
+        "name": "Kennesaw State Owls",
+        "abbreviation": "KENN",
+        "groupId": 12,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/338.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "338": {
+        "totalPointsPerGame": 9.0,
+        "yardsPerGame": 307.0,
+        "passingYardsPerGame": 149.0,
+        "rushingYardsPerGame": 158.0,
+        "totalPointsPerGameAllowed": 10.0,
+        "yardsPerGameAllowed": 348.0,
+        "passingYardsPerGameAllowed": 218.0,
+        "rushingYardsPerGameAllowed": 130.0
+      },
+      "84": {
+        "totalPointsPerGame": 27.0,
+        "yardsPerGame": 502.0,
+        "passingYardsPerGame": 193.0,
+        "rushingYardsPerGame": 309.0,
+        "totalPointsPerGameAllowed": 14.0,
+        "yardsPerGameAllowed": 314.0,
+        "passingYardsPerGameAllowed": 96.0,
+        "rushingYardsPerGameAllowed": 218.0
+      }
+    }
+  },
+  {
+    "id": "401756885",
+    "date": "2025-09-06T16:00Z",
+    "network": "",
+    "odds": {
+      "details": "TTU -48.5",
+      "overUnder": 58.5,
+      "spread": -48.5,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "2641",
+        "name": "Texas Tech Red Raiders",
+        "abbreviation": "TTU",
+        "groupId": 4,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2641.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "2309",
+        "name": "Kent State Golden Flashes",
+        "abbreviation": "KENT",
+        "groupId": 15,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2309.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "2309": {
+        "totalPointsPerGame": 21.0,
+        "yardsPerGame": 305.0,
+        "passingYardsPerGame": 209.0,
+        "rushingYardsPerGame": 96.0,
+        "totalPointsPerGameAllowed": 17.0,
+        "yardsPerGameAllowed": 340.0,
+        "passingYardsPerGameAllowed": 176.0,
+        "rushingYardsPerGameAllowed": 164.0
+      },
+      "2641": {
+        "totalPointsPerGame": 67.0,
+        "yardsPerGame": 608.0,
+        "passingYardsPerGame": 314.0,
+        "rushingYardsPerGame": 294.0,
+        "totalPointsPerGameAllowed": 7.0,
+        "yardsPerGameAllowed": 175.0,
+        "passingYardsPerGameAllowed": 122.0,
+        "rushingYardsPerGameAllowed": 53.0
+      }
+    }
+  },
+  {
+    "id": "401752813",
+    "date": "2025-09-06T16:00Z",
+    "network": "",
+    "odds": {
+      "details": null,
+      "overUnder": null,
+      "spread": null,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "135",
+        "name": "Minnesota Golden Gophers",
+        "abbreviation": "MINN",
+        "groupId": 5,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/135.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "2466",
+        "name": "Northwestern State Demons",
+        "abbreviation": "NWST",
+        "groupId": 30,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2466.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "2466": {},
+      "135": {
+        "totalPointsPerGame": 23.0,
+        "yardsPerGame": 443.0,
+        "passingYardsPerGame": 290.0,
+        "rushingYardsPerGame": 153.0,
+        "totalPointsPerGameAllowed": 10.0,
+        "yardsPerGameAllowed": 151.0,
+        "passingYardsPerGameAllowed": 107.0,
+        "rushingYardsPerGameAllowed": 44.0
+      }
+    }
+  },
+  {
+    "id": "401754524",
+    "date": "2025-09-06T16:00Z",
+    "network": "",
+    "odds": {
+      "details": "NCSU -2.5",
+      "overUnder": 53.5,
+      "spread": -2.5,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "152",
+        "name": "NC State Wolfpack",
+        "abbreviation": "NCSU",
+        "groupId": 1,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/152.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "258",
+        "name": "Virginia Cavaliers",
+        "abbreviation": "UVA",
+        "groupId": 1,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/258.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "258": {
+        "totalPointsPerGame": 48.0,
+        "yardsPerGame": 454.0,
+        "passingYardsPerGame": 290.0,
+        "rushingYardsPerGame": 164.0,
+        "totalPointsPerGameAllowed": 7.0,
+        "yardsPerGameAllowed": 254.0,
+        "passingYardsPerGameAllowed": 163.0,
+        "rushingYardsPerGameAllowed": 91.0
+      },
+      "152": {
+        "totalPointsPerGame": 24.0,
+        "yardsPerGame": 423.0,
+        "passingYardsPerGame": 318.0,
+        "rushingYardsPerGame": 105.0,
+        "totalPointsPerGameAllowed": 17.0,
+        "yardsPerGameAllowed": 413.0,
+        "passingYardsPerGameAllowed": 383.0,
+        "rushingYardsPerGameAllowed": 30.0
+      }
+    }
+  },
+  {
+    "id": "401754529",
+    "date": "2025-09-06T16:00Z",
+    "network": "",
+    "odds": {
+      "details": "PITT -21.5",
+      "overUnder": 51.5,
+      "spread": -21.5,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "221",
+        "name": "Pittsburgh Panthers",
+        "abbreviation": "PITT",
+        "groupId": 1,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/221.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "2117",
+        "name": "Central Michigan Chippewas",
+        "abbreviation": "CMU",
+        "groupId": 15,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2117.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "2117": {
+        "totalPointsPerGame": 16.0,
+        "yardsPerGame": 351.0,
+        "passingYardsPerGame": 115.0,
+        "rushingYardsPerGame": 236.0,
+        "totalPointsPerGameAllowed": 14.0,
+        "yardsPerGameAllowed": 383.0,
+        "passingYardsPerGameAllowed": 308.0,
+        "rushingYardsPerGameAllowed": 75.0
+      },
+      "221": {
+        "totalPointsPerGame": 61.0,
+        "yardsPerGame": 460.0,
+        "passingYardsPerGame": 302.0,
+        "rushingYardsPerGame": 158.0,
+        "totalPointsPerGameAllowed": 9.0,
+        "yardsPerGameAllowed": 208.0,
+        "passingYardsPerGameAllowed": 171.0,
+        "rushingYardsPerGameAllowed": 37.0
+      }
+    }
+  },
+  {
+    "id": "401754618",
+    "date": "2025-09-06T16:00Z",
+    "network": "",
+    "odds": {
+      "details": "SYR -6.5",
+      "overUnder": 58.5,
+      "spread": -6.5,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "183",
+        "name": "Syracuse Orange",
+        "abbreviation": "SYR",
+        "groupId": 1,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/183.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "41",
+        "name": "UConn Huskies",
+        "abbreviation": "CONN",
+        "groupId": 18,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/41.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "41": {
+        "totalPointsPerGame": 59.0,
+        "yardsPerGame": 638.0,
+        "passingYardsPerGame": 388.0,
+        "rushingYardsPerGame": 250.0,
+        "totalPointsPerGameAllowed": 13.0,
+        "yardsPerGameAllowed": 257.0,
+        "passingYardsPerGameAllowed": 129.0,
+        "rushingYardsPerGameAllowed": 128.0
+      },
+      "183": {
+        "totalPointsPerGame": 26.0,
+        "yardsPerGame": 377.0,
+        "passingYardsPerGame": 274.0,
+        "rushingYardsPerGame": 103.0,
+        "totalPointsPerGameAllowed": 45.0,
+        "yardsPerGameAllowed": 493.0,
+        "passingYardsPerGameAllowed": 247.0,
+        "rushingYardsPerGameAllowed": 246.0
+      }
+    }
+  },
+  {
+    "id": "401752694",
+    "date": "2025-09-06T16:45Z",
+    "network": "",
+    "odds": {
+      "details": "TA&M -31.5",
+      "overUnder": 54.5,
+      "spread": -31.5,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "245",
+        "name": "Texas A&M Aggies",
+        "abbreviation": "TA&M",
+        "groupId": 8,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/245.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "328",
+        "name": "Utah State Aggies",
+        "abbreviation": "USU",
+        "groupId": 17,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/328.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "328": {
+        "totalPointsPerGame": 28.0,
+        "yardsPerGame": 360.0,
+        "passingYardsPerGame": 233.0,
+        "rushingYardsPerGame": 127.0,
+        "totalPointsPerGameAllowed": 16.0,
+        "yardsPerGameAllowed": 284.0,
+        "passingYardsPerGameAllowed": 181.0,
+        "rushingYardsPerGameAllowed": 103.0
+      },
+      "245": {
+        "totalPointsPerGame": 42.0,
+        "yardsPerGame": 399.0,
+        "passingYardsPerGame": 291.0,
+        "rushingYardsPerGame": 108.0,
+        "totalPointsPerGameAllowed": 24.0,
+        "yardsPerGameAllowed": 373.0,
+        "passingYardsPerGameAllowed": 170.0,
+        "rushingYardsPerGameAllowed": 203.0
+      }
+    }
+  },
+  {
+    "id": "401754620",
+    "date": "2025-09-06T18:00Z",
+    "network": "",
+    "odds": {
+      "details": null,
+      "overUnder": null,
+      "spread": null,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "154",
+        "name": "Wake Forest Demon Deacons",
+        "abbreviation": "WAKE",
+        "groupId": 1,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/154.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "2717",
+        "name": "Western Carolina Catamounts",
+        "abbreviation": "WCU",
+        "groupId": 29,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2717.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "2717": {},
+      "154": {
+        "totalPointsPerGame": 10.0,
+        "yardsPerGame": 348.0,
+        "passingYardsPerGame": 218.0,
+        "rushingYardsPerGame": 130.0,
+        "totalPointsPerGameAllowed": 9.0,
+        "yardsPerGameAllowed": 307.0,
+        "passingYardsPerGameAllowed": 149.0,
+        "rushingYardsPerGameAllowed": 158.0
+      }
+    }
+  },
+  {
+    "id": "401752815",
+    "date": "2025-09-06T19:30Z",
+    "network": "",
+    "odds": {
+      "details": null,
+      "overUnder": null,
+      "spread": null,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "194",
+        "name": "Ohio State Buckeyes",
+        "abbreviation": "OSU",
+        "groupId": 5,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/194.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "2755",
+        "name": "Grambling Tigers",
+        "abbreviation": "GRAM",
+        "groupId": 31,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2755.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "2755": {},
+      "194": {
+        "totalPointsPerGame": 14.0,
+        "yardsPerGame": 203.0,
+        "passingYardsPerGame": 126.0,
+        "rushingYardsPerGame": 77.0,
+        "totalPointsPerGameAllowed": 7.0,
+        "yardsPerGameAllowed": 336.0,
+        "passingYardsPerGameAllowed": 170.0,
+        "rushingYardsPerGameAllowed": 166.0
+      }
+    }
+  },
+  {
+    "id": "401752685",
+    "date": "2025-09-06T19:30Z",
+    "network": "",
+    "odds": {
+      "details": null,
+      "overUnder": null,
+      "spread": null,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "61",
+        "name": "Georgia Bulldogs",
+        "abbreviation": "UGA",
+        "groupId": 8,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/61.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "2046",
+        "name": "Austin Peay Governors",
+        "abbreviation": "APSU",
+        "groupId": 177,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2046.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "2046": {},
+      "61": {
+        "totalPointsPerGame": 45.0,
+        "yardsPerGame": 488.0,
+        "passingYardsPerGame": 249.0,
+        "rushingYardsPerGame": 239.0,
+        "totalPointsPerGameAllowed": 7.0,
+        "yardsPerGameAllowed": 207.0,
+        "passingYardsPerGameAllowed": 129.0,
+        "rushingYardsPerGameAllowed": 78.0
+      }
+    }
+  },
+  {
+    "id": "401752824",
+    "date": "2025-09-06T19:30Z",
+    "network": "",
+    "odds": {
+      "details": "ORE -29.5",
+      "overUnder": 57.5,
+      "spread": -29.5,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "2483",
+        "name": "Oregon Ducks",
+        "abbreviation": "ORE",
+        "groupId": 5,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2483.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "197",
+        "name": "Oklahoma State Cowboys",
+        "abbreviation": "OKST",
+        "groupId": 4,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/197.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "197": {
+        "totalPointsPerGame": 27.0,
+        "yardsPerGame": 359.0,
+        "passingYardsPerGame": 232.0,
+        "rushingYardsPerGame": 127.0,
+        "totalPointsPerGameAllowed": 7.0,
+        "yardsPerGameAllowed": 225.0,
+        "passingYardsPerGameAllowed": 109.0,
+        "rushingYardsPerGameAllowed": 116.0
+      },
+      "2483": {
+        "totalPointsPerGame": 59.0,
+        "yardsPerGame": 506.0,
+        "passingYardsPerGame": 253.0,
+        "rushingYardsPerGame": 253.0,
+        "totalPointsPerGameAllowed": 13.0,
+        "yardsPerGameAllowed": 244.0,
+        "passingYardsPerGameAllowed": 198.0,
+        "rushingYardsPerGameAllowed": 46.0
+      }
+    }
+  },
+  {
+    "id": "401754637",
+    "date": "2025-09-06T19:30Z",
+    "network": "",
+    "odds": {
+      "details": "CLEM -33.5",
+      "overUnder": 51.5,
+      "spread": -33.5,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "228",
+        "name": "Clemson Tigers",
+        "abbreviation": "CLEM",
+        "groupId": 1,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/228.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "2653",
+        "name": "Troy Trojans",
+        "abbreviation": "TROY",
+        "groupId": 37,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2653.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "2653": {
+        "totalPointsPerGame": 38.0,
+        "yardsPerGame": 416.0,
+        "passingYardsPerGame": 144.0,
+        "rushingYardsPerGame": 272.0,
+        "totalPointsPerGameAllowed": 20.0,
+        "yardsPerGameAllowed": 249.0,
+        "passingYardsPerGameAllowed": 184.0,
+        "rushingYardsPerGameAllowed": 65.0
+      },
+      "228": {
+        "totalPointsPerGame": 10.0,
+        "yardsPerGame": 261.0,
+        "passingYardsPerGame": 230.0,
+        "rushingYardsPerGame": 31.0,
+        "totalPointsPerGameAllowed": 17.0,
+        "yardsPerGameAllowed": 356.0,
+        "passingYardsPerGameAllowed": 248.0,
+        "rushingYardsPerGameAllowed": 108.0
+      }
+    }
+  },
+  {
+    "id": "401752686",
+    "date": "2025-09-06T19:30Z",
+    "network": "",
+    "odds": {
+      "details": "MISS -10.5",
+      "overUnder": 50.5,
+      "spread": 10.5,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "96",
+        "name": "Kentucky Wildcats",
+        "abbreviation": "UK",
+        "groupId": 8,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/96.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "145",
+        "name": "Ole Miss Rebels",
+        "abbreviation": "MISS",
+        "groupId": 8,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/145.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "145": {
+        "totalPointsPerGame": 63.0,
+        "yardsPerGame": 695.0,
+        "passingYardsPerGame": 400.0,
+        "rushingYardsPerGame": 295.0,
+        "totalPointsPerGameAllowed": 7.0,
+        "yardsPerGameAllowed": 260.0,
+        "passingYardsPerGameAllowed": 69.0,
+        "rushingYardsPerGameAllowed": 191.0
+      },
+      "96": {
+        "totalPointsPerGame": 24.0,
+        "yardsPerGame": 305.0,
+        "passingYardsPerGame": 85.0,
+        "rushingYardsPerGame": 220.0,
+        "totalPointsPerGameAllowed": 16.0,
+        "yardsPerGameAllowed": 329.0,
+        "passingYardsPerGameAllowed": 270.0,
+        "rushingYardsPerGameAllowed": 59.0
+      }
+    }
+  },
+  {
+    "id": "401752692",
+    "date": "2025-09-06T19:30Z",
+    "network": "",
+    "odds": {
+      "details": null,
+      "overUnder": null,
+      "spread": null,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "2633",
+        "name": "Tennessee Volunteers",
+        "abbreviation": "TENN",
+        "groupId": 8,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2633.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "2193",
+        "name": "East Tennessee State Buccaneers",
+        "abbreviation": "ETSU",
+        "groupId": 29,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2193.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "2193": {},
+      "2633": {
+        "totalPointsPerGame": 45.0,
+        "yardsPerGame": 493.0,
+        "passingYardsPerGame": 247.0,
+        "rushingYardsPerGame": 246.0,
+        "totalPointsPerGameAllowed": 26.0,
+        "yardsPerGameAllowed": 377.0,
+        "passingYardsPerGameAllowed": 274.0,
+        "rushingYardsPerGameAllowed": 103.0
+      }
+    }
+  },
+  {
+    "id": "401752689",
+    "date": "2025-09-06T19:30Z",
+    "network": "",
+    "odds": {
+      "details": "MIZ -6.5",
+      "overUnder": 51.5,
+      "spread": -6.5,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "142",
+        "name": "Missouri Tigers",
+        "abbreviation": "MIZ",
+        "groupId": 8,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/142.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "2305",
+        "name": "Kansas Jayhawks",
+        "abbreviation": "KU",
+        "groupId": 4,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2305.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "2305": {
+        "totalPointsPerGame": 38.5,
+        "yardsPerGame": 507.0,
+        "passingYardsPerGame": 261.0,
+        "rushingYardsPerGame": 246.0,
+        "totalPointsPerGameAllowed": 7.0,
+        "yardsPerGameAllowed": 179.5,
+        "passingYardsPerGameAllowed": 134.5,
+        "rushingYardsPerGameAllowed": 45.0
+      },
+      "142": {
+        "totalPointsPerGame": 61.0,
+        "yardsPerGame": 560.0,
+        "passingYardsPerGame": 341.0,
+        "rushingYardsPerGame": 219.0,
+        "totalPointsPerGameAllowed": 6.0,
+        "yardsPerGameAllowed": 227.0,
+        "passingYardsPerGameAllowed": 73.0,
+        "rushingYardsPerGameAllowed": 154.0
+      }
+    }
+  },
+  {
+    "id": "401752818",
+    "date": "2025-09-06T19:30Z",
+    "network": "",
+    "odds": {
+      "details": "RUTG -15.5",
+      "overUnder": 45.5,
+      "spread": -15.5,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "164",
+        "name": "Rutgers Scarlet Knights",
+        "abbreviation": "RUTG",
+        "groupId": 5,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/164.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "193",
+        "name": "Miami (OH) RedHawks",
+        "abbreviation": "M-OH",
+        "groupId": 15,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/193.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "193": {
+        "totalPointsPerGame": 0.0,
+        "yardsPerGame": 117.0,
+        "passingYardsPerGame": 83.0,
+        "rushingYardsPerGame": 34.0,
+        "totalPointsPerGameAllowed": 17.0,
+        "yardsPerGameAllowed": 353.0,
+        "passingYardsPerGameAllowed": 188.0,
+        "rushingYardsPerGameAllowed": 165.0
+      },
+      "164": {
+        "totalPointsPerGame": 34.0,
+        "yardsPerGame": 399.0,
+        "passingYardsPerGame": 252.0,
+        "rushingYardsPerGame": 147.0,
+        "totalPointsPerGameAllowed": 31.0,
+        "yardsPerGameAllowed": 440.0,
+        "passingYardsPerGameAllowed": 239.0,
+        "rushingYardsPerGameAllowed": 201.0
+      }
+    }
+  },
+  {
+    "id": "401754622",
+    "date": "2025-09-06T19:30Z",
+    "network": "",
+    "odds": {
+      "details": null,
+      "overUnder": null,
+      "spread": null,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "59",
+        "name": "Georgia Tech Yellow Jackets",
+        "abbreviation": "GT",
+        "groupId": 1,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/59.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "2241",
+        "name": "Gardner-Webb Runnin' Bulldogs",
+        "abbreviation": "GWEB",
+        "groupId": 179,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2241.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "2241": {},
+      "59": {
+        "totalPointsPerGame": 27.0,
+        "yardsPerGame": 463.0,
+        "passingYardsPerGame": 143.0,
+        "rushingYardsPerGame": 320.0,
+        "totalPointsPerGameAllowed": 20.0,
+        "yardsPerGameAllowed": 305.0,
+        "passingYardsPerGameAllowed": 159.0,
+        "rushingYardsPerGameAllowed": 146.0
+      }
+    }
+  },
+  {
+    "id": "401756880",
+    "date": "2025-09-06T19:30Z",
+    "network": "",
+    "odds": {
+      "details": "CIN -21.5",
+      "overUnder": 46.5,
+      "spread": -21.5,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "2132",
+        "name": "Cincinnati Bearcats",
+        "abbreviation": "CIN",
+        "groupId": 4,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2132.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "189",
+        "name": "Bowling Green Falcons",
+        "abbreviation": "BGSU",
+        "groupId": 15,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/189.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "189": {
+        "totalPointsPerGame": 26.0,
+        "yardsPerGame": 266.0,
+        "passingYardsPerGame": 109.0,
+        "rushingYardsPerGame": 157.0,
+        "totalPointsPerGameAllowed": 7.0,
+        "yardsPerGameAllowed": 177.0,
+        "passingYardsPerGameAllowed": 118.0,
+        "rushingYardsPerGameAllowed": 59.0
+      },
+      "2132": {
+        "totalPointsPerGame": 17.0,
+        "yardsPerGame": 271.0,
+        "passingYardsPerGame": 69.0,
+        "rushingYardsPerGame": 202.0,
+        "totalPointsPerGameAllowed": 20.0,
+        "yardsPerGameAllowed": 353.0,
+        "passingYardsPerGameAllowed": 243.0,
+        "rushingYardsPerGameAllowed": 110.0
+      }
+    }
+  },
+  {
+    "id": "401756881",
+    "date": "2025-09-06T19:30Z",
+    "network": "",
+    "odds": {
+      "details": "COLO -24.5",
+      "overUnder": 50.5,
+      "spread": -24.5,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "38",
+        "name": "Colorado Buffaloes",
+        "abbreviation": "COLO",
+        "groupId": 4,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/38.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "48",
+        "name": "Delaware Blue Hens",
+        "abbreviation": "DEL",
+        "groupId": 12,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/48.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "48": {
+        "totalPointsPerGame": 35.0,
+        "yardsPerGame": 409.0,
+        "passingYardsPerGame": 272.0,
+        "rushingYardsPerGame": 137.0,
+        "totalPointsPerGameAllowed": 17.0,
+        "yardsPerGameAllowed": 349.0,
+        "passingYardsPerGameAllowed": 149.0,
+        "rushingYardsPerGameAllowed": 200.0
+      },
+      "38": {
+        "totalPointsPerGame": 20.0,
+        "yardsPerGame": 305.0,
+        "passingYardsPerGame": 159.0,
+        "rushingYardsPerGame": 146.0,
+        "totalPointsPerGameAllowed": 27.0,
+        "yardsPerGameAllowed": 463.0,
+        "passingYardsPerGameAllowed": 143.0,
+        "rushingYardsPerGameAllowed": 320.0
+      }
+    }
+  },
+  {
+    "id": "401752820",
+    "date": "2025-09-06T20:00Z",
+    "network": "",
+    "odds": {
+      "details": "WIS -28.5",
+      "overUnder": 45.5,
+      "spread": -28.5,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "275",
+        "name": "Wisconsin Badgers",
+        "abbreviation": "WIS",
+        "groupId": 5,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/275.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "2393",
+        "name": "Middle Tennessee Blue Raiders",
+        "abbreviation": "MTSU",
+        "groupId": 12,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2393.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "2393": {
+        "totalPointsPerGame": 14.0,
+        "yardsPerGame": 153.0,
+        "passingYardsPerGame": 109.0,
+        "rushingYardsPerGame": 44.0,
+        "totalPointsPerGameAllowed": 34.0,
+        "yardsPerGameAllowed": 343.0,
+        "passingYardsPerGameAllowed": 193.0,
+        "rushingYardsPerGameAllowed": 150.0
+      },
+      "275": {
+        "totalPointsPerGame": 17.0,
+        "yardsPerGame": 353.0,
+        "passingYardsPerGame": 188.0,
+        "rushingYardsPerGame": 165.0,
+        "totalPointsPerGameAllowed": 0.0,
+        "yardsPerGameAllowed": 117.0,
+        "passingYardsPerGameAllowed": 83.0,
+        "rushingYardsPerGameAllowed": 34.0
+      }
+    }
+  },
+  {
+    "id": "401756883",
+    "date": "2025-09-06T20:00Z",
+    "network": "",
+    "odds": {
+      "details": "WVU -3.5",
+      "overUnder": 60.5,
+      "spread": 3.5,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "195",
+        "name": "Ohio Bobcats",
+        "abbreviation": "OHIO",
+        "groupId": 15,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/195.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "277",
+        "name": "West Virginia Mountaineers",
+        "abbreviation": "WVU",
+        "groupId": 4,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/277.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "277": {
+        "totalPointsPerGame": 45.0,
+        "yardsPerGame": 625.0,
+        "passingYardsPerGame": 232.0,
+        "rushingYardsPerGame": 393.0,
+        "totalPointsPerGameAllowed": 3.0,
+        "yardsPerGameAllowed": 123.0,
+        "passingYardsPerGameAllowed": 70.0,
+        "rushingYardsPerGameAllowed": 53.0
+      },
+      "195": {
+        "totalPointsPerGame": 31.0,
+        "yardsPerGame": 440.0,
+        "passingYardsPerGame": 239.0,
+        "rushingYardsPerGame": 201.0,
+        "totalPointsPerGameAllowed": 34.0,
+        "yardsPerGameAllowed": 399.0,
+        "passingYardsPerGameAllowed": 252.0,
+        "rushingYardsPerGameAllowed": 147.0
+      }
+    }
+  },
+  {
+    "id": "401752684",
+    "date": "2025-09-06T20:15Z",
+    "network": "",
+    "odds": {
+      "details": "FLA -17.5",
+      "overUnder": 56.5,
+      "spread": -17.5,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "57",
+        "name": "Florida Gators",
+        "abbreviation": "FLA",
+        "groupId": 8,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/57.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "58",
+        "name": "South Florida Bulls",
+        "abbreviation": "USF",
+        "groupId": 151,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/58.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "58": {
+        "totalPointsPerGame": 34.0,
+        "yardsPerGame": 372.0,
+        "passingYardsPerGame": 255.0,
+        "rushingYardsPerGame": 117.0,
+        "totalPointsPerGameAllowed": 7.0,
+        "yardsPerGameAllowed": 378.0,
+        "passingYardsPerGameAllowed": 256.0,
+        "rushingYardsPerGameAllowed": 122.0
+      },
+      "57": {
+        "totalPointsPerGame": 55.0,
+        "yardsPerGame": 451.0,
+        "passingYardsPerGame": 251.0,
+        "rushingYardsPerGame": 200.0,
+        "totalPointsPerGameAllowed": 0.0,
+        "yardsPerGameAllowed": 86.0,
+        "passingYardsPerGameAllowed": 49.0,
+        "rushingYardsPerGameAllowed": 37.0
+      }
+    }
+  },
+  {
+    "id": "401752682",
+    "date": "2025-09-06T21:00Z",
+    "network": "",
+    "odds": {
+      "details": "ARK -23.5",
+      "overUnder": 62.5,
+      "spread": -23.5,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "8",
+        "name": "Arkansas Razorbacks",
+        "abbreviation": "ARK",
+        "groupId": 8,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/8.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "2032",
+        "name": "Arkansas State Red Wolves",
+        "abbreviation": "ARST",
+        "groupId": 37,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2032.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "2032": {
+        "totalPointsPerGame": 42.0,
+        "yardsPerGame": 492.0,
+        "passingYardsPerGame": 345.0,
+        "rushingYardsPerGame": 147.0,
+        "totalPointsPerGameAllowed": 24.0,
+        "yardsPerGameAllowed": 364.0,
+        "passingYardsPerGameAllowed": 272.0,
+        "rushingYardsPerGameAllowed": 92.0
+      },
+      "8": {
+        "totalPointsPerGame": 52.0,
+        "yardsPerGame": 552.0,
+        "passingYardsPerGame": 358.0,
+        "rushingYardsPerGame": 194.0,
+        "totalPointsPerGameAllowed": 7.0,
+        "yardsPerGameAllowed": 235.0,
+        "passingYardsPerGameAllowed": 166.0,
+        "rushingYardsPerGameAllowed": 69.0
+      }
+    }
+  },
+  {
+    "id": "401756887",
+    "date": "2025-09-06T22:00Z",
+    "network": "",
+    "odds": {
+      "details": null,
+      "overUnder": null,
+      "spread": null,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "254",
+        "name": "Utah Utes",
+        "abbreviation": "UTAH",
+        "groupId": 4,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/254.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "13",
+        "name": "Cal Poly Mustangs",
+        "abbreviation": "CP",
+        "groupId": 20,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/13.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "13": {},
+      "254": {
+        "totalPointsPerGame": 43.0,
+        "yardsPerGame": 492.0,
+        "passingYardsPerGame": 206.0,
+        "rushingYardsPerGame": 286.0,
+        "totalPointsPerGameAllowed": 10.0,
+        "yardsPerGameAllowed": 220.0,
+        "passingYardsPerGameAllowed": 136.0,
+        "rushingYardsPerGameAllowed": 84.0
+      }
+    }
+  },
+  {
+    "id": "401754530",
+    "date": "2025-09-06T22:00Z",
+    "network": "",
+    "odds": {
+      "details": null,
+      "overUnder": null,
+      "spread": null,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "25",
+        "name": "California Golden Bears",
+        "abbreviation": "CAL",
+        "groupId": 1,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/25.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "2640",
+        "name": "Texas Southern Tigers",
+        "abbreviation": "TXSO",
+        "groupId": 31,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2640.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "2640": {},
+      "25": {
+        "totalPointsPerGame": 34.0,
+        "yardsPerGame": 356.0,
+        "passingYardsPerGame": 234.0,
+        "rushingYardsPerGame": 122.0,
+        "totalPointsPerGameAllowed": 15.0,
+        "yardsPerGameAllowed": 313.0,
+        "passingYardsPerGameAllowed": 248.0,
+        "rushingYardsPerGameAllowed": 65.0
+      }
+    }
+  },
+  {
+    "id": "401754641",
+    "date": "2025-09-06T23:00Z",
+    "network": "",
+    "odds": {
+      "details": null,
+      "overUnder": null,
+      "spread": null,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "2390",
+        "name": "Miami Hurricanes",
+        "abbreviation": "MIA",
+        "groupId": 1,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2390.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "2065",
+        "name": "Bethune-Cookman Wildcats",
+        "abbreviation": "BCU",
+        "groupId": 31,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2065.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "2065": {},
+      "2390": {
+        "totalPointsPerGame": 27.0,
+        "yardsPerGame": 324.0,
+        "passingYardsPerGame": 205.0,
+        "rushingYardsPerGame": 119.0,
+        "totalPointsPerGameAllowed": 24.0,
+        "yardsPerGameAllowed": 314.0,
+        "passingYardsPerGameAllowed": 221.0,
+        "rushingYardsPerGameAllowed": 93.0
+      }
+    }
+  },
+  {
+    "id": "401752691",
+    "date": "2025-09-06T23:00Z",
+    "network": "",
+    "odds": {
+      "details": null,
+      "overUnder": null,
+      "spread": null,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "2579",
+        "name": "South Carolina Gamecocks",
+        "abbreviation": "SC",
+        "groupId": 8,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2579.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "2569",
+        "name": "South Carolina State Bulldogs",
+        "abbreviation": "SCST",
+        "groupId": 24,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2569.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "2569": {},
+      "2579": {
+        "totalPointsPerGame": 24.0,
+        "yardsPerGame": 328.0,
+        "passingYardsPerGame": 209.0,
+        "rushingYardsPerGame": 119.0,
+        "totalPointsPerGameAllowed": 11.0,
+        "yardsPerGameAllowed": 336.0,
+        "passingYardsPerGameAllowed": 221.0,
+        "rushingYardsPerGameAllowed": 115.0
+      }
+    }
+  },
+  {
+    "id": "401754527",
+    "date": "2025-09-06T23:00Z",
+    "network": "",
+    "odds": {
+      "details": "UNC -13.5",
+      "overUnder": 49.5,
+      "spread": 13.5,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "2429",
+        "name": "Charlotte 49ers",
+        "abbreviation": "CLT",
+        "groupId": 151,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2429.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "153",
+        "name": "North Carolina Tar Heels",
+        "abbreviation": "UNC",
+        "groupId": 1,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/153.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "153": {
+        "totalPointsPerGame": 14.0,
+        "yardsPerGame": 222.0,
+        "passingYardsPerGame": 172.0,
+        "rushingYardsPerGame": 50.0,
+        "totalPointsPerGameAllowed": 48.0,
+        "yardsPerGameAllowed": 542.0,
+        "passingYardsPerGameAllowed": 284.0,
+        "rushingYardsPerGameAllowed": 258.0
+      },
+      "2429": {
+        "totalPointsPerGame": 11.0,
+        "yardsPerGame": 218.0,
+        "passingYardsPerGame": 142.0,
+        "rushingYardsPerGame": 76.0,
+        "totalPointsPerGameAllowed": 34.0,
+        "yardsPerGameAllowed": 586.0,
+        "passingYardsPerGameAllowed": 404.0,
+        "rushingYardsPerGameAllowed": 182.0
+      }
+    }
+  },
+  {
+    "id": "401756882",
+    "date": "2025-09-06T23:00Z",
+    "network": "",
+    "odds": {
+      "details": "KSU -17.5",
+      "overUnder": 46.5,
+      "spread": -17.5,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "2306",
+        "name": "Kansas State Wildcats",
+        "abbreviation": "KSU",
+        "groupId": 4,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2306.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "349",
+        "name": "Army Black Knights",
+        "abbreviation": "ARMY",
+        "groupId": 151,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/349.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "349": {
+        "totalPointsPerGame": 27.0,
+        "yardsPerGame": 411.0,
+        "passingYardsPerGame": 131.0,
+        "rushingYardsPerGame": 280.0,
+        "totalPointsPerGameAllowed": 30.0,
+        "yardsPerGameAllowed": 344.0,
+        "passingYardsPerGameAllowed": 152.0,
+        "rushingYardsPerGameAllowed": 192.0
+      },
+      "2306": {
+        "totalPointsPerGame": 29.5,
+        "yardsPerGame": 422.0,
+        "passingYardsPerGame": 295.5,
+        "rushingYardsPerGame": 126.5,
+        "totalPointsPerGameAllowed": 29.5,
+        "yardsPerGameAllowed": 333.5,
+        "passingYardsPerGameAllowed": 217.5,
+        "rushingYardsPerGameAllowed": 116.0
+      }
+    }
+  },
+  {
+    "id": "401756884",
+    "date": "2025-09-06T23:00Z",
+    "network": "",
+    "odds": {
+      "details": "HOU -13.5",
+      "overUnder": 39.5,
+      "spread": 13.5,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "242",
+        "name": "Rice Owls",
+        "abbreviation": "RICE",
+        "groupId": 151,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/242.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "248",
+        "name": "Houston Cougars",
+        "abbreviation": "HOU",
+        "groupId": 4,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/248.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "248": {
+        "totalPointsPerGame": 27.0,
+        "yardsPerGame": 343.0,
+        "passingYardsPerGame": 152.0,
+        "rushingYardsPerGame": 191.0,
+        "totalPointsPerGameAllowed": 0.0,
+        "yardsPerGameAllowed": 144.0,
+        "passingYardsPerGameAllowed": 105.0,
+        "rushingYardsPerGameAllowed": 39.0
+      },
+      "242": {
+        "totalPointsPerGame": 14.0,
+        "yardsPerGame": 251.0,
+        "passingYardsPerGame": 45.0,
+        "rushingYardsPerGame": 206.0,
+        "totalPointsPerGameAllowed": 12.0,
+        "yardsPerGameAllowed": 239.0,
+        "passingYardsPerGameAllowed": 88.0,
+        "rushingYardsPerGameAllowed": 151.0
+      }
+    }
+  },
+  {
+    "id": "401756886",
+    "date": "2025-09-06T23:00Z",
+    "network": "",
+    "odds": {
+      "details": null,
+      "overUnder": null,
+      "spread": null,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "2116",
+        "name": "UCF Knights",
+        "abbreviation": "UCF",
+        "groupId": 4,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2116.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "2448",
+        "name": "North Carolina A&T Aggies",
+        "abbreviation": "NCAT",
+        "groupId": 48,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2448.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "2448": {},
+      "2116": {
+        "totalPointsPerGame": 17.0,
+        "yardsPerGame": 422.0,
+        "passingYardsPerGame": 314.0,
+        "rushingYardsPerGame": 108.0,
+        "totalPointsPerGameAllowed": 10.0,
+        "yardsPerGameAllowed": 322.0,
+        "passingYardsPerGameAllowed": 157.0,
+        "rushingYardsPerGameAllowed": 165.0
+      }
+    }
+  },
+  {
+    "id": "401752687",
+    "date": "2025-09-06T23:30Z",
+    "network": "",
+    "odds": {
+      "details": "LSU -37.5",
+      "overUnder": 51.5,
+      "spread": -37.5,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "99",
+        "name": "LSU Tigers",
+        "abbreviation": "LSU",
+        "groupId": 8,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/99.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "2348",
+        "name": "Louisiana Tech Bulldogs",
+        "abbreviation": "LT",
+        "groupId": 12,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2348.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "2348": {
+        "totalPointsPerGame": 24.0,
+        "yardsPerGame": 262.0,
+        "passingYardsPerGame": 130.0,
+        "rushingYardsPerGame": 132.0,
+        "totalPointsPerGameAllowed": 0.0,
+        "yardsPerGameAllowed": 273.0,
+        "passingYardsPerGameAllowed": 145.0,
+        "rushingYardsPerGameAllowed": 128.0
+      },
+      "99": {
+        "totalPointsPerGame": 17.0,
+        "yardsPerGame": 356.0,
+        "passingYardsPerGame": 248.0,
+        "rushingYardsPerGame": 108.0,
+        "totalPointsPerGameAllowed": 10.0,
+        "yardsPerGameAllowed": 261.0,
+        "passingYardsPerGameAllowed": 230.0,
+        "rushingYardsPerGameAllowed": 31.0
+      }
+    }
+  },
+  {
+    "id": "401752688",
+    "date": "2025-09-06T23:30Z",
+    "network": "",
+    "odds": {
+      "details": "ASU -6.5",
+      "overUnder": 59.5,
+      "spread": 6.5,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "344",
+        "name": "Mississippi State Bulldogs",
+        "abbreviation": "MSST",
+        "groupId": 8,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/344.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "9",
+        "name": "Arizona State Sun Devils",
+        "abbreviation": "ASU",
+        "groupId": 4,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/9.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "9": {
+        "totalPointsPerGame": 38.0,
+        "yardsPerGame": 458.0,
+        "passingYardsPerGame": 257.0,
+        "rushingYardsPerGame": 201.0,
+        "totalPointsPerGameAllowed": 19.0,
+        "yardsPerGameAllowed": 331.0,
+        "passingYardsPerGameAllowed": 242.0,
+        "rushingYardsPerGameAllowed": 89.0
+      },
+      "344": {
+        "totalPointsPerGame": 34.0,
+        "yardsPerGame": 465.0,
+        "passingYardsPerGame": 277.0,
+        "rushingYardsPerGame": 188.0,
+        "totalPointsPerGameAllowed": 17.0,
+        "yardsPerGameAllowed": 301.0,
+        "passingYardsPerGameAllowed": 199.0,
+        "rushingYardsPerGameAllowed": 102.0
+      }
+    }
+  },
+  {
+    "id": "401752690",
+    "date": "2025-09-06T23:30Z",
+    "network": "",
+    "odds": {
+      "details": "OU -2.5",
+      "overUnder": 46.5,
+      "spread": -2.5,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "201",
+        "name": "Oklahoma Sooners",
+        "abbreviation": "OU",
+        "groupId": 8,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/201.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "130",
+        "name": "Michigan Wolverines",
+        "abbreviation": "MICH",
+        "groupId": 5,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/130.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "130": {
+        "totalPointsPerGame": 34.0,
+        "yardsPerGame": 452.0,
+        "passingYardsPerGame": 251.0,
+        "rushingYardsPerGame": 201.0,
+        "totalPointsPerGameAllowed": 17.0,
+        "yardsPerGameAllowed": 267.0,
+        "passingYardsPerGameAllowed": 217.0,
+        "rushingYardsPerGameAllowed": 50.0
+      },
+      "201": {
+        "totalPointsPerGame": 35.0,
+        "yardsPerGame": 495.0,
+        "passingYardsPerGame": 392.0,
+        "rushingYardsPerGame": 103.0,
+        "totalPointsPerGameAllowed": 3.0,
+        "yardsPerGameAllowed": 151.0,
+        "passingYardsPerGameAllowed": 34.0,
+        "rushingYardsPerGameAllowed": 117.0
+      }
+    }
+  },
+  {
+    "id": "401752683",
+    "date": "2025-09-06T23:30Z",
+    "network": "",
+    "odds": {
+      "details": "AUB -43.5",
+      "overUnder": 52.5,
+      "spread": -43.5,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "2",
+        "name": "Auburn Tigers",
+        "abbreviation": "AUB",
+        "groupId": 8,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "2050",
+        "name": "Ball State Cardinals",
+        "abbreviation": "BALL",
+        "groupId": 15,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2050.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "2050": {
+        "totalPointsPerGame": 0.0,
+        "yardsPerGame": 203.0,
+        "passingYardsPerGame": 87.0,
+        "rushingYardsPerGame": 116.0,
+        "totalPointsPerGameAllowed": 31.0,
+        "yardsPerGameAllowed": 433.0,
+        "passingYardsPerGameAllowed": 340.0,
+        "rushingYardsPerGameAllowed": 93.0
+      },
+      "2": {
+        "totalPointsPerGame": 38.0,
+        "yardsPerGame": 415.0,
+        "passingYardsPerGame": 108.0,
+        "rushingYardsPerGame": 307.0,
+        "totalPointsPerGameAllowed": 24.0,
+        "yardsPerGameAllowed": 483.0,
+        "passingYardsPerGameAllowed": 419.0,
+        "rushingYardsPerGameAllowed": 64.0
+      }
+    }
+  },
+  {
+    "id": "401752695",
+    "date": "2025-09-06T23:30Z",
+    "network": "",
+    "odds": {
+      "details": "VT -1.5",
+      "overUnder": 47.5,
+      "spread": -1.5,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "259",
+        "name": "Virginia Tech Hokies",
+        "abbreviation": "VT",
+        "groupId": 1,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/259.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "238",
+        "name": "Vanderbilt Commodores",
+        "abbreviation": "VAN",
+        "groupId": 8,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/238.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "238": {
+        "totalPointsPerGame": 45.0,
+        "yardsPerGame": 481.0,
+        "passingYardsPerGame": 280.0,
+        "rushingYardsPerGame": 201.0,
+        "totalPointsPerGameAllowed": 3.0,
+        "yardsPerGameAllowed": 135.0,
+        "passingYardsPerGameAllowed": 88.0,
+        "rushingYardsPerGameAllowed": 47.0
+      },
+      "259": {
+        "totalPointsPerGame": 11.0,
+        "yardsPerGame": 336.0,
+        "passingYardsPerGame": 221.0,
+        "rushingYardsPerGame": 115.0,
+        "totalPointsPerGameAllowed": 24.0,
+        "yardsPerGameAllowed": 328.0,
+        "passingYardsPerGameAllowed": 209.0,
+        "rushingYardsPerGameAllowed": 119.0
+      }
+    }
+  },
+  {
+    "id": "401752810",
+    "date": "2025-09-06T23:30Z",
+    "network": "",
+    "odds": {
+      "details": "NEB -34.5",
+      "overUnder": 47.5,
+      "spread": -34.5,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "158",
+        "name": "Nebraska Cornhuskers",
+        "abbreviation": "NEB",
+        "groupId": 5,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/158.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "2006",
+        "name": "Akron Zips",
+        "abbreviation": "AKR",
+        "groupId": 15,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2006.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "2006": {
+        "totalPointsPerGame": 0.0,
+        "yardsPerGame": 228.0,
+        "passingYardsPerGame": 139.0,
+        "rushingYardsPerGame": 89.0,
+        "totalPointsPerGameAllowed": 10.0,
+        "yardsPerGameAllowed": 426.0,
+        "passingYardsPerGameAllowed": 260.0,
+        "rushingYardsPerGameAllowed": 166.0
+      },
+      "158": {
+        "totalPointsPerGame": 20.0,
+        "yardsPerGame": 353.0,
+        "passingYardsPerGame": 243.0,
+        "rushingYardsPerGame": 110.0,
+        "totalPointsPerGameAllowed": 17.0,
+        "yardsPerGameAllowed": 271.0,
+        "passingYardsPerGameAllowed": 69.0,
+        "rushingYardsPerGameAllowed": 202.0
+      }
+    }
+  },
+  {
+    "id": "401752814",
+    "date": "2025-09-06T23:30Z",
+    "network": "",
+    "odds": {
+      "details": "USC -28.5",
+      "overUnder": 61.5,
+      "spread": -28.5,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "30",
+        "name": "USC Trojans",
+        "abbreviation": "USC",
+        "groupId": 5,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/30.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "290",
+        "name": "Georgia Southern Eagles",
+        "abbreviation": "GASO",
+        "groupId": 37,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/290.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "290": {
+        "totalPointsPerGame": 14.0,
+        "yardsPerGame": 242.0,
+        "passingYardsPerGame": 158.0,
+        "rushingYardsPerGame": 84.0,
+        "totalPointsPerGameAllowed": 42.0,
+        "yardsPerGameAllowed": 527.0,
+        "passingYardsPerGameAllowed": 176.0,
+        "rushingYardsPerGameAllowed": 351.0
+      },
+      "30": {
+        "totalPointsPerGame": 73.0,
+        "yardsPerGame": 597.0,
+        "passingYardsPerGame": 364.0,
+        "rushingYardsPerGame": 233.0,
+        "totalPointsPerGameAllowed": 13.0,
+        "yardsPerGameAllowed": 224.0,
+        "passingYardsPerGameAllowed": 159.0,
+        "rushingYardsPerGameAllowed": 65.0
+      }
+    }
+  },
+  {
+    "id": "401752816",
+    "date": "2025-09-06T23:30Z",
+    "network": "",
+    "odds": {
+      "details": "MSU -4.5",
+      "overUnder": 46.5,
+      "spread": -4.5,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "127",
+        "name": "Michigan State Spartans",
+        "abbreviation": "MSU",
+        "groupId": 5,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/127.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "103",
+        "name": "Boston College Eagles",
+        "abbreviation": "BC",
+        "groupId": 1,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/103.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "103": {
+        "totalPointsPerGame": 66.0,
+        "yardsPerGame": 555.0,
+        "passingYardsPerGame": 458.0,
+        "rushingYardsPerGame": 97.0,
+        "totalPointsPerGameAllowed": 10.0,
+        "yardsPerGameAllowed": 168.0,
+        "passingYardsPerGameAllowed": 152.0,
+        "rushingYardsPerGameAllowed": 16.0
+      },
+      "127": {
+        "totalPointsPerGame": 23.0,
+        "yardsPerGame": 336.0,
+        "passingYardsPerGame": 155.0,
+        "rushingYardsPerGame": 181.0,
+        "totalPointsPerGameAllowed": 6.0,
+        "yardsPerGameAllowed": 217.0,
+        "passingYardsPerGameAllowed": 188.0,
+        "rushingYardsPerGameAllowed": 29.0
+      }
+    }
+  },
+  {
+    "id": "401752819",
+    "date": "2025-09-06T23:30Z",
+    "network": "",
+    "odds": {
+      "details": null,
+      "overUnder": null,
+      "spread": null,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "2509",
+        "name": "Purdue Boilermakers",
+        "abbreviation": "PUR",
+        "groupId": 5,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2509.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "79",
+        "name": "Southern Illinois Salukis",
+        "abbreviation": "SIU",
+        "groupId": 21,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/79.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "79": {},
+      "2509": {
+        "totalPointsPerGame": 31.0,
+        "yardsPerGame": 433.0,
+        "passingYardsPerGame": 340.0,
+        "rushingYardsPerGame": 93.0,
+        "totalPointsPerGameAllowed": 0.0,
+        "yardsPerGameAllowed": 203.0,
+        "passingYardsPerGameAllowed": 87.0,
+        "rushingYardsPerGameAllowed": 116.0
+      }
+    }
+  },
+  {
+    "id": "401752681",
+    "date": "2025-09-06T23:45Z",
+    "network": "",
+    "odds": {
+      "details": "ALA -36.5",
+      "overUnder": 50.5,
+      "spread": -36.5,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "333",
+        "name": "Alabama Crimson Tide",
+        "abbreviation": "ALA",
+        "groupId": 8,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/333.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "2433",
+        "name": "UL Monroe Warhawks",
+        "abbreviation": "ULM",
+        "groupId": 37,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2433.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "2433": {
+        "totalPointsPerGame": 29.0,
+        "yardsPerGame": 434.0,
+        "passingYardsPerGame": 123.0,
+        "rushingYardsPerGame": 311.0,
+        "totalPointsPerGameAllowed": 0.0,
+        "yardsPerGameAllowed": 131.0,
+        "passingYardsPerGameAllowed": 50.0,
+        "rushingYardsPerGameAllowed": 81.0
+      },
+      "333": {
+        "totalPointsPerGame": 17.0,
+        "yardsPerGame": 341.0,
+        "passingYardsPerGame": 254.0,
+        "rushingYardsPerGame": 87.0,
+        "totalPointsPerGameAllowed": 31.0,
+        "yardsPerGameAllowed": 382.0,
+        "passingYardsPerGameAllowed": 152.0,
+        "rushingYardsPerGameAllowed": 230.0
+      }
+    }
+  },
+  {
+    "id": "401752823",
+    "date": "2025-09-07T00:00Z",
+    "network": "",
+    "odds": {
+      "details": "UCLA -2.5",
+      "overUnder": 53.5,
+      "spread": 2.5,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "2439",
+        "name": "UNLV Rebels",
+        "abbreviation": "UNLV",
+        "groupId": 17,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2439.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "26",
+        "name": "UCLA Bruins",
+        "abbreviation": "UCLA",
+        "groupId": 5,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/26.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "26": {
+        "totalPointsPerGame": 10.0,
+        "yardsPerGame": 220.0,
+        "passingYardsPerGame": 136.0,
+        "rushingYardsPerGame": 84.0,
+        "totalPointsPerGameAllowed": 43.0,
+        "yardsPerGameAllowed": 492.0,
+        "passingYardsPerGameAllowed": 206.0,
+        "rushingYardsPerGameAllowed": 286.0
+      },
+      "2439": {
+        "totalPointsPerGame": 38.0,
+        "yardsPerGame": 468.0,
+        "passingYardsPerGame": 240.5,
+        "rushingYardsPerGame": 227.5,
+        "totalPointsPerGameAllowed": 26.0,
+        "yardsPerGameAllowed": 443.5,
+        "passingYardsPerGameAllowed": 291.0,
+        "rushingYardsPerGameAllowed": 152.5
+      }
+    }
+  },
+  {
+    "id": "401756879",
+    "date": "2025-09-07T02:00Z",
+    "network": "",
+    "odds": {
+      "details": null,
+      "overUnder": null,
+      "spread": null,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "12",
+        "name": "Arizona Wildcats",
+        "abbreviation": "ARIZ",
+        "groupId": 4,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/12.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "2692",
+        "name": "Weber State Wildcats",
+        "abbreviation": "WEB",
+        "groupId": 20,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2692.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "2692": {},
+      "12": {
+        "totalPointsPerGame": 40.0,
+        "yardsPerGame": 344.0,
+        "passingYardsPerGame": 161.0,
+        "rushingYardsPerGame": 183.0,
+        "totalPointsPerGameAllowed": 6.0,
+        "yardsPerGameAllowed": 290.0,
+        "passingYardsPerGameAllowed": 223.0,
+        "rushingYardsPerGameAllowed": 67.0
+      }
+    }
+  },
+  {
+    "id": "401754526",
+    "date": "2025-09-07T02:15Z",
+    "network": "",
+    "odds": {
+      "details": "BYU -18.5",
+      "overUnder": 45.5,
+      "spread": -18.5,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "252",
+        "name": "BYU Cougars",
+        "abbreviation": "BYU",
+        "groupId": 4,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/252.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "24",
+        "name": "Stanford Cardinal",
+        "abbreviation": "STAN",
+        "groupId": 1,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/24.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "24": {
+        "totalPointsPerGame": 20.0,
+        "yardsPerGame": 286.0,
+        "passingYardsPerGame": 109.0,
+        "rushingYardsPerGame": 177.0,
+        "totalPointsPerGameAllowed": 23.0,
+        "yardsPerGameAllowed": 306.0,
+        "passingYardsPerGameAllowed": 210.0,
+        "rushingYardsPerGameAllowed": 96.0
+      },
+      "252": {
+        "totalPointsPerGame": 69.0,
+        "yardsPerGame": 606.0,
+        "passingYardsPerGame": 138.0,
+        "rushingYardsPerGame": 468.0,
+        "totalPointsPerGameAllowed": 0.0,
+        "yardsPerGameAllowed": 51.0,
+        "passingYardsPerGameAllowed": 56.0,
+        "rushingYardsPerGameAllowed": -5.0
+      }
+    }
+  },
+  {
+    "id": "401752821",
+    "date": "2025-09-07T03:00Z",
+    "network": "",
+    "odds": {
+      "details": null,
+      "overUnder": null,
+      "spread": null,
+      "favorite": null
+    },
+    "competitors": [
+      {
+        "id": "264",
+        "name": "Washington Huskies",
+        "abbreviation": "WASH",
+        "groupId": 5,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/264.png",
+        "homeAway": "home"
+      },
+      {
+        "id": "302",
+        "name": "UC Davis Aggies",
+        "abbreviation": "UCD",
+        "groupId": 20,
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/302.png",
+        "homeAway": "away"
+      }
+    ],
+    "stats": {
+      "302": {},
+      "264": {
+        "totalPointsPerGame": 38.0,
+        "yardsPerGame": 509.0,
+        "passingYardsPerGame": 226.0,
+        "rushingYardsPerGame": 283.0,
+        "totalPointsPerGameAllowed": 21.0,
+        "yardsPerGameAllowed": 265.0,
+        "passingYardsPerGameAllowed": 180.0,
+        "rushingYardsPerGameAllowed": 85.0
+      }
+    }
+  }
+]
