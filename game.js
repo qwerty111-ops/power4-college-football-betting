@@ -11,11 +11,10 @@
 
 (() => {
   /**
-   * Parses the current page’s URL and returns the value of the specified query
-   * parameter.
+   * Parse query parameters from the current URL.
    *
-   * @param {string} name Parameter name
-   * @returns {string|null} Parameter value or null if not present
+   * @param {string} name Name of parameter
+   * @returns {string|null}
    */
   function getQueryParam(name) {
     const params = new URLSearchParams(window.location.search);
@@ -23,33 +22,31 @@
   }
 
   /**
-   * Renders the game summary into the DOM.
+   * Render the game details table from a local event object.  Each event
+   * contains precomputed statistics keyed by team ID.
    *
-   * @param {object} summary JSON summary object from ESPN
+   * @param {object} event Event object from games.json
    */
-  function renderSummary(summary) {
-    const titleEl = document.getElementById('game-title');
+  function renderEvent(event) {
     const container = document.getElementById('summary-container');
     container.innerHTML = '';
-    const boxscore = summary.boxscore;
-    if (!boxscore || !boxscore.teams || boxscore.teams.length < 2) {
-      titleEl.textContent = 'Summary not available';
+    const titleEl = document.getElementById('game-title');
+    const competitors = event.competitors || [];
+    if (competitors.length < 2) {
+      titleEl.textContent = 'Game data unavailable';
       return;
     }
-    // Determine teams and statistics
-    const teamStats = boxscore.teams.map((t) => {
-      const stats = {};
-      for (const stat of t.statistics || []) {
-        stats[stat.name] = stat.displayValue;
-      }
-      return {
-        name: t.team.displayName,
-        logo: t.team.logo || '',
-        stats
-      };
-    });
-    titleEl.textContent = `${teamStats[0].name} vs ${teamStats[1].name}`;
-    // Build a comparison table
+    // Extract teams and their stats
+    const home = competitors.find((c) => c.homeAway === 'home');
+    const away = competitors.find((c) => c.homeAway === 'away');
+    if (!home || !away) {
+      titleEl.textContent = 'Game data unavailable';
+      return;
+    }
+    const statsMap = event.stats || {};
+    const homeStats = statsMap[home.id] || {};
+    const awayStats = statsMap[away.id] || {};
+    titleEl.textContent = `${away.name} vs ${home.name}`;
     const rows = [
       { key: 'totalPointsPerGame', label: 'Points Per Game' },
       { key: 'yardsPerGame', label: 'Total Yards' },
@@ -63,26 +60,28 @@
     const table = document.createElement('table');
     table.className = 'rankings-table';
     const header = document.createElement('tr');
-    header.innerHTML = `<th>Statistic</th><th>${teamStats[0].name}</th><th>${teamStats[1].name}</th>`;
+    header.innerHTML = `<th>Statistic</th><th>${away.name}</th><th>${home.name}</th>`;
     table.appendChild(header);
-    for (const row of rows) {
+    rows.forEach((row) => {
       const tr = document.createElement('tr');
-      const statA = teamStats[0].stats[row.key] || '–';
-      const statB = teamStats[1].stats[row.key] || '–';
-      tr.innerHTML = `<td>${row.label}</td><td>${statA}</td><td>${statB}</td>`;
+      const aVal = awayStats[row.key] !== undefined ? awayStats[row.key] : '–';
+      const hVal = homeStats[row.key] !== undefined ? homeStats[row.key] : '–';
+      tr.innerHTML = `<td>${row.label}</td><td>${aVal}</td><td>${hVal}</td>`;
       table.appendChild(tr);
-    }
+    });
     container.appendChild(table);
-    // Additional game info (venue and weather)
-    const info = summary.gameInfo || {};
+    // Basic event details (date and network)
     const infoDiv = document.createElement('div');
     infoDiv.style.marginTop = '20px';
-    if (info.venue && info.venue.fullName) {
-      infoDiv.innerHTML += `<p><strong>Venue:</strong> ${info.venue.fullName}, ${info.venue.address.city}, ${info.venue.address.state}</p>`;
-    }
-    if (info.weather) {
-      infoDiv.innerHTML += `<p><strong>Weather:</strong> ${info.weather.temperature}°F, High ${info.weather.highTemperature}°F, Low ${info.weather.lowTemperature}°F, Precip ${info.weather.precipitation}%</p>`;
-    }
+    const formattedDate = new Date(event.date).toLocaleString('en-US', {
+      timeZone: 'America/Denver',
+      weekday: 'short',
+      month: 'short',
+      day: 'numeric',
+      hour: 'numeric',
+      minute: '2-digit'
+    });
+    infoDiv.innerHTML = `<p><strong>Date:</strong> ${formattedDate}${event.network ? ` • ${event.network}` : ''}</p>`;
     container.appendChild(infoDiv);
   }
 
@@ -93,15 +92,19 @@
       titleEl.textContent = 'No event specified';
       return;
     }
-    titleEl.textContent = 'Loading game summary…';
+    titleEl.textContent = 'Loading game…';
     try {
-      const url = `https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=${encodeURIComponent(eventId)}`;
-      const res = await fetch(url);
-      const data = await res.json();
-      renderSummary(data);
+      const res = await fetch('data/games.json');
+      const events = await res.json();
+      const event = events.find((e) => String(e.id) === String(eventId));
+      if (!event) {
+        titleEl.textContent = 'Game not found';
+        return;
+      }
+      renderEvent(event);
     } catch (err) {
       console.error(err);
-      titleEl.textContent = 'Failed to load summary';
+      titleEl.textContent = 'Failed to load game data';
     }
   }
   document.addEventListener('DOMContentLoaded', loadGame);

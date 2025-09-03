@@ -10,47 +10,15 @@
  */
 
 (() => {
+  // Conference group identifiers for ACC, Big 12, Big Ten and SEC
   const P4_GROUPS = [1, 4, 5, 8];
+  // Maps conference group IDs to CSS classes for colour bars
   const CONFERENCE_CLASS = {
     5: 'big-ten',
     8: 'sec',
     1: 'acc',
     4: 'big-12'
   };
-  const TEAM_CACHE = {};
-
-  /**
-   * Fetches core team information (conference group ID, logo URL and display name)
-   * from the ESPN core API.  Results are cached to avoid redundant network
-   * requests.
-   *
-   * @param {string|number} teamId The ESPN team identifier
-   * @returns {Promise<{ groupId: number|null, logo: string|null, name: string }>} team info
-   */
-  async function getTeamInfo(teamId) {
-    if (TEAM_CACHE[teamId]) return TEAM_CACHE[teamId];
-    try {
-      const res = await fetch(
-        `https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/teams/${teamId}?lang=en&region=us`
-      );
-      const data = await res.json();
-      const groupId = data.groups && data.groups.id ? parseInt(data.groups.id) : null;
-      // Logos array may not exist; fall back to team abbreviation if missing
-      let logo = null;
-      if (data.logos && data.logos.length) {
-        logo = data.logos[0].href;
-      }
-      TEAM_CACHE[teamId] = {
-        groupId,
-        logo,
-        name: data.displayName || data.name || data.shortDisplayName || ''
-      };
-    } catch (err) {
-      // If the fetch fails we return minimal info
-      TEAM_CACHE[teamId] = { groupId: null, logo: null, name: '' };
-    }
-    return TEAM_CACHE[teamId];
-  }
 
   /**
    * Converts an ISO date string to a human friendly date/time in America/Denver.
@@ -71,82 +39,67 @@
   }
 
   /**
-   * Loads the scoreboard for the specified date and populates the game cards.
+   * Load the local games JSON file and populate the game cards.  This
+   * implementation no longer makes network requests to ESPN; instead it
+   * reads data compiled offline by ``update_data.py``.
    */
   async function loadGames() {
     const gamesContainer = document.getElementById('games-container');
     gamesContainer.innerHTML = '<p>Loading games…</p>';
     try {
-      const scoreboardUrl =
-        'https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=20250906';
-      const res = await fetch(scoreboardUrl);
-      const data = await res.json();
-      const events = Array.isArray(data.events) ? data.events : [];
-      // Prepare an array of promises to process each event sequentially
+      const res = await fetch('data/games.json');
+      const events = await res.json();
       const gameCards = [];
       for (const event of events) {
-        if (!event.competitions || !event.competitions.length) continue;
-        const comp = event.competitions[0];
-        const competitors = comp.competitors || [];
-        let isP4Game = false;
+        const competitors = event.competitors || [];
+        // Determine if at least one competitor is from a P4 conference
         let confId = null;
-        // Preload team info for each competitor
-        const teamInfos = [];
         for (const c of competitors) {
-          const info = await getTeamInfo(c.team.id);
-          teamInfos.push(info);
-          if (!isP4Game && info.groupId && P4_GROUPS.includes(info.groupId)) {
-            isP4Game = true;
-            confId = info.groupId;
+          if (c.groupId && P4_GROUPS.includes(c.groupId)) {
+            confId = c.groupId;
+            // Prefer the home team’s conference if multiple are P4
+            if (c.homeAway === 'home') break;
           }
         }
-        if (!isP4Game) continue;
-        // Determine bar class based on conference of the P4 team.  If both
-        // competitors are P4 teams from different conferences we'll choose the
-        // home team’s conference colour.
+        if (confId == null) continue;
         const barClass = CONFERENCE_CLASS[confId] || '';
-        // Extract schedule time and network (if available)
-        const gameDate = comp.date;
-        const formatted = formatDateTime(gameDate);
-        const broadcasters = comp.broadcasts && comp.broadcasts.length ? comp.broadcasts[0].media.shortName : '';
-        // Determine betting details
+        // Format date/time and network
+        const formatted = formatDateTime(event.date);
+        const network = event.network || '';
+        // Compose betting line
         let oddsText = '';
-        if (comp.odds && comp.odds.length) {
-          const oddsObj = comp.odds[0];
-          if (oddsObj.details) {
-            oddsText = oddsObj.details;
-          }
-          if (typeof oddsObj.overUnder === 'number') {
-            oddsText += ` | O/U: ${oddsObj.overUnder}`;
-          }
-          if (typeof oddsObj.spread === 'number') {
-            const favorite = competitors.find((c) => c.homeAway === 'home')?.team.abbreviation || '';
-            oddsText += ` | Spread: ${favorite}${oddsObj.spread > 0 ? '+' : ''}${oddsObj.spread}`;
-          }
+        const odds = event.odds || {};
+        if (odds.details) {
+          oddsText = odds.details;
         }
-        // Build card HTML
+        if (typeof odds.overUnder === 'number') {
+          oddsText += (oddsText ? ' | ' : '') + `O/U: ${odds.overUnder}`;
+        }
+        if (typeof odds.spread === 'number' && odds.favorite) {
+          const fav = competitors.find((c) => c.id === String(odds.favorite));
+          const abbrev = fav ? fav.abbreviation : '';
+          oddsText += (oddsText ? ' | ' : '') + `Spread: ${abbrev}${odds.spread > 0 ? '+' : ''}${odds.spread}`;
+        }
+        // Determine home and away teams
         const away = competitors.find((c) => c.homeAway === 'away');
         const home = competitors.find((c) => c.homeAway === 'home');
-        const awayInfo = teamInfos[competitors.indexOf(away)];
-        const homeInfo = teamInfos[competitors.indexOf(home)];
+        if (!away || !home) continue;
         const card = document.createElement('div');
         card.className = 'game-card';
         card.innerHTML = `
           <div class="conference-bar ${barClass}"></div>
           <div class="game-header">
             <div class="team-name">
-              ${awayInfo.logo ? `<img class="team-logo" src="${awayInfo.logo}" alt="${awayInfo.name}">` : ''}
-              <span>${awayInfo.name}</span>
+              ${away.logo ? `<img class="team-logo" src="${away.logo}" alt="${away.name}">` : ''}
+              <span>${away.name}</span>
             </div>
+            <div class="team-name">@</div>
             <div class="team-name">
-              @
-            </div>
-            <div class="team-name">
-              ${homeInfo.logo ? `<img class="team-logo" src="${homeInfo.logo}" alt="${homeInfo.name}">` : ''}
-              <span>${homeInfo.name}</span>
+              ${home.logo ? `<img class="team-logo" src="${home.logo}" alt="${home.name}">` : ''}
+              <span>${home.name}</span>
             </div>
           </div>
-          <div class="game-info">${formatted}${broadcasters ? ` • ${broadcasters}` : ''}</div>
+          <div class="game-info">${formatted}${network ? ` • ${network}` : ''}</div>
           <div class="odds">${oddsText}</div>
         `;
         card.addEventListener('click', () => {
@@ -159,15 +112,14 @@
         gamesContainer.innerHTML = '<p>No Power‑4 games found for this date.</p>';
         return;
       }
-      for (const gc of gameCards) {
-        gamesContainer.appendChild(gc);
+      for (const card of gameCards) {
+        gamesContainer.appendChild(card);
       }
     } catch (err) {
-      gamesContainer.innerHTML = `<p>Failed to load games. Please try again later.</p>`;
       console.error(err);
+      gamesContainer.innerHTML = '<p>Failed to load games. Please try again later.</p>';
     }
   }
 
-  // Kick off the loading on page load
   document.addEventListener('DOMContentLoaded', loadGames);
 })();

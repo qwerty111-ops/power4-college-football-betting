@@ -10,8 +10,8 @@
  */
 
 (() => {
+  // Power‑4 conference identifiers (ACC, Big 12, Big Ten, SEC)
   const P4_GROUPS = [1, 4, 5, 8];
-  const TEAM_CACHE = {};
 
   /**
    * Retrieves the value of a query parameter from the current URL.
@@ -24,61 +24,9 @@
     return params.get(name);
   }
 
-  /**
-   * Fetches basic team information from the ESPN core API.  The returned
-   * object includes the conference group identifier and display name.  Results
-   * are cached to minimise network traffic across the rankings calculations.
-   *
-   * @param {string|number} teamId ESPN team identifier
-   * @returns {Promise<{groupId: number|null, name: string}>} team info
-   */
-  async function getTeamInfo(teamId) {
-    if (TEAM_CACHE[teamId]) return TEAM_CACHE[teamId];
-    try {
-      const res = await fetch(
-        `https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/teams/${teamId}?lang=en&region=us`
-      );
-      const data = await res.json();
-      const groupId = data.groups && data.groups.id ? parseInt(data.groups.id) : null;
-      TEAM_CACHE[teamId] = {
-        groupId,
-        name: data.displayName || data.name || ''
-      };
-    } catch (err) {
-      TEAM_CACHE[teamId] = { groupId: null, name: '' };
-    }
-    return TEAM_CACHE[teamId];
-  }
-
-  /**
-   * Retrieves head‑to‑head season statistics for both teams in an event.
-   * Utilises the ESPN summary endpoint to access average offensive and
-   * defensive metrics.  Returns an array of objects keyed by team ID.
-   *
-   * @param {string|number} eventId ESPN event identifier
-   * @returns {Promise<Array<{id: string, stats: object}>>} team stats array
-   */
-  async function fetchEventTeamStats(eventId) {
-    try {
-      const url = `https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=${encodeURIComponent(
-        eventId
-      )}`;
-      const res = await fetch(url);
-      const summary = await res.json();
-      const boxscore = summary.boxscore;
-      if (!boxscore || !boxscore.teams || boxscore.teams.length < 2) return [];
-      return boxscore.teams.map((t) => {
-        const stats = {};
-        for (const s of t.statistics || []) {
-          stats[s.name] = parseFloat(s.displayValue);
-        }
-        return { id: t.team.id, name: t.team.displayName, stats };
-      });
-    } catch (err) {
-      console.error('Failed to fetch event stats', err);
-      return [];
-    }
-  }
+  // Note: getTeamInfo and fetchEventTeamStats are no longer needed because
+  // statistics and team metadata are precomputed into data/games.json by
+  // update_data.py.
 
   /**
    * Constructs and renders the offensive rankings table.  Teams are ranked
@@ -93,45 +41,38 @@
     );
     const container = document.getElementById('rankings-container');
     container.innerHTML = '<p>Loading offensive rankings…</p>';
-    const scoreboardUrl =
-      'https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=20250906';
     try {
-      const res = await fetch(scoreboardUrl);
-      const data = await res.json();
-      const events = Array.isArray(data.events) ? data.events : [];
+      const res = await fetch('data/games.json');
+      const events = await res.json();
       const teamStatsMap = {};
-      for (const event of events) {
-        const statsArr = await fetchEventTeamStats(event.id);
-        for (const team of statsArr) {
-          // Determine if team belongs to a Power‑4 conference
-          const info = await getTeamInfo(team.id);
-          if (!info.groupId || !P4_GROUPS.includes(info.groupId)) continue;
-          // Only consider teams once
-          if (!teamStatsMap[team.id]) {
-            teamStatsMap[team.id] = {
-              name: team.name,
-              groupId: info.groupId,
-              ppg: team.stats.totalPointsPerGame || 0,
-              yards: team.stats.yardsPerGame || 0,
-              passYards: team.stats.passingYardsPerGame || 0,
-              rushYards: team.stats.rushingYardsPerGame || 0
+      // Aggregate statistics for each team
+      events.forEach((event) => {
+        (event.competitors || []).forEach((comp) => {
+          const id = String(comp.id);
+          if (!comp.groupId || !P4_GROUPS.includes(comp.groupId)) return;
+          const stats = (event.stats && event.stats[id]) || {};
+          if (!teamStatsMap[id]) {
+            teamStatsMap[id] = {
+              name: comp.name,
+              groupId: comp.groupId,
+              ppg: stats.totalPointsPerGame || 0,
+              yards: stats.yardsPerGame || 0,
+              passYards: stats.passingYardsPerGame || 0,
+              rushYards: stats.rushingYardsPerGame || 0
             };
           }
-        }
-      }
+        });
+      });
       const teams = Object.values(teamStatsMap);
-      // Compute rankings based on ppg (descending)
       teams.sort((a, b) => b.ppg - a.ppg);
-      // Build HTML table
       const table = document.createElement('table');
       table.className = 'rankings-table';
-      const header = document.createElement('tr');
-      header.innerHTML =
+      const headerRow = document.createElement('tr');
+      headerRow.innerHTML =
         '<th>Rank</th><th>Team</th><th>Conf</th><th>2025 PPG</th><th>2025 Yds</th><th>2025 Pass Yds</th><th>2025 Rush Yds</th><th>2024 PPG</th>';
-      table.appendChild(header);
+      table.appendChild(headerRow);
       teams.forEach((t, idx) => {
         const tr = document.createElement('tr');
-        // Use same PPG for 2024 column since 2024 data unavailable
         tr.innerHTML = `<td>${idx + 1}</td><td>${t.name}</td><td>${conferenceName(t.groupId)}</td><td>${t.ppg.toFixed(
           1
         )}</td><td>${t.yards.toFixed(1)}</td><td>${t.passYards.toFixed(1)}</td><td>${t.rushYards.toFixed(
@@ -161,38 +102,35 @@
     );
     const container = document.getElementById('rankings-container');
     container.innerHTML = '<p>Loading defensive rankings…</p>';
-    const scoreboardUrl =
-      'https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=20250906';
     try {
-      const res = await fetch(scoreboardUrl);
-      const data = await res.json();
-      const events = Array.isArray(data.events) ? data.events : [];
+      const res = await fetch('data/games.json');
+      const events = await res.json();
       const teamStatsMap = {};
-      for (const event of events) {
-        const statsArr = await fetchEventTeamStats(event.id);
-        for (const team of statsArr) {
-          const info = await getTeamInfo(team.id);
-          if (!info.groupId || !P4_GROUPS.includes(info.groupId)) continue;
-          if (!teamStatsMap[team.id]) {
-            teamStatsMap[team.id] = {
-              name: team.name,
-              groupId: info.groupId,
-              ppgAllowed: team.stats.totalPointsPerGameAllowed || 0,
-              yardsAllowed: team.stats.yardsPerGameAllowed || 0,
-              passAllowed: team.stats.passingYardsPerGameAllowed || 0,
-              rushAllowed: team.stats.rushingYardsPerGameAllowed || 0
+      events.forEach((event) => {
+        (event.competitors || []).forEach((comp) => {
+          const id = String(comp.id);
+          if (!comp.groupId || !P4_GROUPS.includes(comp.groupId)) return;
+          const stats = (event.stats && event.stats[id]) || {};
+          if (!teamStatsMap[id]) {
+            teamStatsMap[id] = {
+              name: comp.name,
+              groupId: comp.groupId,
+              ppgAllowed: stats.totalPointsPerGameAllowed || 0,
+              yardsAllowed: stats.yardsPerGameAllowed || 0,
+              passAllowed: stats.passingYardsPerGameAllowed || 0,
+              rushAllowed: stats.rushingYardsPerGameAllowed || 0
             };
           }
-        }
-      }
+        });
+      });
       const teams = Object.values(teamStatsMap);
       teams.sort((a, b) => a.ppgAllowed - b.ppgAllowed);
       const table = document.createElement('table');
       table.className = 'rankings-table';
-      const header = document.createElement('tr');
-      header.innerHTML =
+      const headerRow = document.createElement('tr');
+      headerRow.innerHTML =
         '<th>Rank</th><th>Team</th><th>Conf</th><th>2025 Pts Allowed</th><th>2025 Yds Allowed</th><th>2025 Pass Yds Allowed</th><th>2025 Rush Yds Allowed</th><th>2024 Pts Allowed</th>';
-      table.appendChild(header);
+      table.appendChild(headerRow);
       teams.forEach((t, idx) => {
         const tr = document.createElement('tr');
         tr.innerHTML = `<td>${idx + 1}</td><td>${t.name}</td><td>${conferenceName(t.groupId)}</td><td>${t.ppgAllowed.toFixed(
