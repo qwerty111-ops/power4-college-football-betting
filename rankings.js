@@ -36,9 +36,9 @@
    */
   async function buildOffenseRankings() {
     setPageTitle('Offensive Rankings');
-    setDescription(
-      'Teams are ranked by points per game using statistics from ESPN’s summary endpoint for games on Sept 6 2025. Points per game, total yards, passing yards and rushing yards are shown for the 2025 season. Due to limited historical APIs, 2024 values mirror the 2025 numbers.'
-    );
+        setDescription(
+          'Teams are ranked by points per game using statistics compiled from the local data set. Total yards per game, passing yards, rushing yards and points per game are displayed. Because ESPN does not provide freely accessible historical season splits, the same values are shown for both the 2025 and 2024 seasons.'
+        );
     const container = document.getElementById('rankings-container');
     container.innerHTML = '<p>Loading offensive rankings…</p>';
     try {
@@ -65,23 +65,37 @@
       });
       const teams = Object.values(teamStatsMap);
       teams.sort((a, b) => b.ppg - a.ppg);
-      const table = document.createElement('table');
-      table.className = 'rankings-table';
-      const headerRow = document.createElement('tr');
-      headerRow.innerHTML =
-        '<th>Rank</th><th>Team</th><th>Conf</th><th>2025 PPG</th><th>2025 Yds</th><th>2025 Pass Yds</th><th>2025 Rush Yds</th><th>2024 PPG</th>';
-      table.appendChild(headerRow);
-      teams.forEach((t, idx) => {
-        const tr = document.createElement('tr');
-        tr.innerHTML = `<td>${idx + 1}</td><td>${t.name}</td><td>${conferenceName(t.groupId)}</td><td>${t.ppg.toFixed(
-          1
-        )}</td><td>${t.yards.toFixed(1)}</td><td>${t.passYards.toFixed(1)}</td><td>${t.rushYards.toFixed(
-          1
-        )}</td><td>${t.ppg.toFixed(1)}</td>`;
-        table.appendChild(tr);
-      });
-      container.innerHTML = '';
-      container.appendChild(table);
+        // Build a function to create a table for a given season.  Since
+        // historical data for 2024 are not available, the same statistics
+        // collected for 2025 are reused for the 2024 table.  This avoids
+        // displaying missing values while still providing a baseline for
+        // comparison.
+        function createOffenseTable(seasonLabel) {
+          const tbl = document.createElement('table');
+          tbl.className = 'rankings-table';
+          const header = document.createElement('tr');
+          header.innerHTML =
+            '<th>Rank</th><th>Team</th><th>Conf</th><th>Total YPG</th><th>Pass YPG</th><th>Rush YPG</th><th>PPG</th>';
+          tbl.appendChild(header);
+          teams.forEach((t, idx) => {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `<td>${idx + 1}</td><td>${t.name}</td><td>${conferenceName(t.groupId)}</td><td>${t.yards.toFixed(
+              1
+            )}</td><td>${t.passYards.toFixed(1)}</td><td>${t.rushYards.toFixed(1)}</td><td>${t.ppg.toFixed(
+              1
+            )}</td>`;
+            tbl.appendChild(tr);
+          });
+          const wrapper = document.createElement('div');
+          const heading = document.createElement('h3');
+          heading.textContent = `${seasonLabel} Season`;
+          wrapper.appendChild(heading);
+          wrapper.appendChild(tbl);
+          return wrapper;
+        }
+        container.innerHTML = '';
+        container.appendChild(createOffenseTable('2025'));
+        container.appendChild(createOffenseTable('2024'));
     } catch (err) {
       console.error(err);
       container.innerHTML = '<p>Failed to load offensive rankings.</p>';
@@ -98,7 +112,7 @@
   async function buildDefenseRankings() {
     setPageTitle('Defensive Rankings');
     setDescription(
-      'Teams are ranked by points allowed per game using ESPN summary statistics for games on Sept 6 2025. Lower values indicate stronger defenses. Yards allowed, passing yards allowed and rushing yards allowed are also shown. 2024 numbers reuse 2025 values due to limited historical data.'
+      'Teams are ranked by yards allowed per game using statistics compiled from the local data set. Lower totals indicate stronger defenses. Yards allowed, passing yards allowed, rushing yards allowed and points allowed are displayed. Because historical splits are unavailable, 2024 tables reuse 2025 values.'
     );
     const container = document.getElementById('rankings-container');
     container.innerHTML = '<p>Loading defensive rankings…</p>';
@@ -106,6 +120,7 @@
       const res = await fetch('data/games.json');
       const events = await res.json();
       const teamStatsMap = {};
+      // Aggregate defensive statistics for each team
       events.forEach((event) => {
         (event.competitors || []).forEach((comp) => {
           const id = String(comp.id);
@@ -115,33 +130,38 @@
             teamStatsMap[id] = {
               name: comp.name,
               groupId: comp.groupId,
-              ppgAllowed: stats.totalPointsPerGameAllowed || 0,
               yardsAllowed: stats.yardsPerGameAllowed || 0,
               passAllowed: stats.passingYardsPerGameAllowed || 0,
-              rushAllowed: stats.rushingYardsPerGameAllowed || 0
+              rushAllowed: stats.rushingYardsPerGameAllowed || 0,
+              ptsAllowed: stats.totalPointsPerGameAllowed || 0
             };
           }
         });
       });
       const teams = Object.values(teamStatsMap);
-      teams.sort((a, b) => a.ppgAllowed - b.ppgAllowed);
-      const table = document.createElement('table');
-      table.className = 'rankings-table';
-      const headerRow = document.createElement('tr');
-      headerRow.innerHTML =
-        '<th>Rank</th><th>Team</th><th>Conf</th><th>2025 Pts Allowed</th><th>2025 Yds Allowed</th><th>2025 Pass Yds Allowed</th><th>2025 Rush Yds Allowed</th><th>2024 Pts Allowed</th>';
-      table.appendChild(headerRow);
-      teams.forEach((t, idx) => {
-        const tr = document.createElement('tr');
-        tr.innerHTML = `<td>${idx + 1}</td><td>${t.name}</td><td>${conferenceName(t.groupId)}</td><td>${t.ppgAllowed.toFixed(
-          1
-        )}</td><td>${t.yardsAllowed.toFixed(1)}</td><td>${t.passAllowed.toFixed(1)}</td><td>${t.rushAllowed.toFixed(
-          1
-        )}</td><td>${t.ppgAllowed.toFixed(1)}</td>`;
-        table.appendChild(tr);
-      });
+      // Sort by total yards allowed ascending
+      teams.sort((a, b) => a.yardsAllowed - b.yardsAllowed);
+      function createDefenseTable(label) {
+        const table = document.createElement('table');
+        table.className = 'rankings-table';
+        const headerRow = document.createElement('tr');
+        headerRow.innerHTML = '<th>Rank</th><th>Team</th><th>Conf</th><th>Yds Allowed</th><th>Pass Yds Allowed</th><th>Rush Yds Allowed</th><th>Pts Allowed</th>';
+        table.appendChild(headerRow);
+        teams.forEach((t, idx) => {
+          const tr = document.createElement('tr');
+          tr.innerHTML = `<td>${idx + 1}</td><td>${t.name}</td><td>${conferenceName(t.groupId)}</td><td>${t.yardsAllowed.toFixed(1)}</td><td>${t.passAllowed.toFixed(1)}</td><td>${t.rushAllowed.toFixed(1)}</td><td>${t.ptsAllowed.toFixed(1)}</td>`;
+          table.appendChild(tr);
+        });
+        const wrapper = document.createElement('div');
+        const heading = document.createElement('h3');
+        heading.textContent = `${label} Season`;
+        wrapper.appendChild(heading);
+        wrapper.appendChild(table);
+        return wrapper;
+      }
       container.innerHTML = '';
-      container.appendChild(table);
+      container.appendChild(createDefenseTable('2025'));
+      container.appendChild(createDefenseTable('2024'));
     } catch (err) {
       console.error(err);
       container.innerHTML = '<p>Failed to load defensive rankings.</p>';
@@ -267,18 +287,32 @@
    * @returns {string} Conference name or blank
    */
   function conferenceName(id) {
-    switch (id) {
-      case 1:
-        return 'ACC';
-      case 4:
-        return 'Big 12';
-      case 5:
-        return 'Big Ten';
-      case 8:
-        return 'SEC';
-      default:
-        return '';
-    }
+      switch (id) {
+        case 1:
+          return 'ACC';
+        case 4:
+          return 'Big 12';
+        case 5:
+          return 'Big Ten';
+        case 8:
+          return 'SEC';
+        case 12:
+          return 'CUSA';
+        case 15:
+          return 'MAC';
+        case 17:
+          return 'Mountain West';
+        case 18:
+          return 'Independent';
+        case 29:
+          return 'Southern';
+        case 30:
+          return 'WAC';
+        case 31:
+          return 'SWAC';
+        default:
+          return '';
+      }
   }
 
   /**

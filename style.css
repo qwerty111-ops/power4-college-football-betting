@@ -104,6 +104,66 @@ body {
 .acc     { background-color: #f26621; }
 .big-12  { background-color: #018749; }
 
+/* Matchup row displaying both conferences */
+.conference-matchup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+  gap: 4px;
+}
+
+.conf-label {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/* Separator between conference labels */
+.vs-sep {
+  font-size: 0.7rem;
+  color: #666;
+}
+
+/* Colour assignments for individual conferences.  Colours are chosen
+   to provide clear visual distinction between leagues. */
+.conf-acc      { background-color: #f26621; }
+.conf-big12    { background-color: #018749; }
+.conf-bigten   { background-color: #00449e; }
+.conf-sec      { background-color: #c30421; }
+.conf-cusa     { background-color: #6c2c91; }
+.conf-mac      { background-color: #005a9c; }
+.conf-mw       { background-color: #006747; }
+.conf-ind      { background-color: #6e6e6e; }
+.conf-southern { background-color: #795548; }
+.conf-wac      { background-color: #7d1515; }
+.conf-swac     { background-color: #9c27b0; }
+
+/* Game details (date/time/TV) section */
+.game-details p {
+  margin: 2px 0;
+  font-size: 0.8rem;
+}
+
+/* Odds details (spread and over/under) */
+.odds-details p {
+  margin: 2px 0;
+  font-size: 0.8rem;
+}
+
+/* Analysis link at bottom of card */
+.analysis-link {
+  margin-top: 8px;
+  font-size: 0.8rem;
+  color: #0066cc;
+  text-decoration: underline;
+  text-align: center;
+}
+
 /* Simple table for rankings pages */
 .rankings-table {
   width: 100%;
